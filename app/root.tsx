@@ -1,9 +1,9 @@
 import { cssBundleHref } from '@remix-run/css-bundle';
 import type {
-  LoaderArgs,
   LinksFunction,
   LoaderFunction,
-  V2_MetaFunction,
+  LoaderFunctionArgs,
+  MetaFunction,
 } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import {
@@ -13,29 +13,31 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
   useFetcher,
+  useLoaderData,
 } from '@remix-run/react';
 
-import globalStyles from '~/styles/global.css';
-import { getThemeFromCookie } from '~/lib/theme.server';
-import { ThemeProvider } from '~/components/theme-provider';
-import { Header } from '~/components/header';
 import { Analytics } from '@vercel/analytics/react';
+import { Header } from '~/components/header';
+import { ThemeProvider } from '~/components/theme-provider';
+import { getThemeFromCookie } from '~/lib/theme.server';
+import globalStyles from '~/styles/global.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: globalStyles },
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
 
-export const loader: LoaderFunction = async ({ request }: LoaderArgs) => {
+export const loader: LoaderFunction = async ({
+  request,
+}: LoaderFunctionArgs) => {
   const theme = await getThemeFromCookie(request);
   return json({
     theme,
   });
 };
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     { title: 'Remix shadcn/ui Dark theme Demo App' },
     {

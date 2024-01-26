@@ -5,6 +5,7 @@
     "build": "remix build",
     "dev": "remix dev",
     "test": "npx cypress open --e2e",
+    "tc": "tsc",
     "typecheck": "tsc"
   },
   "dependencies": {
