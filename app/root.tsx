@@ -17,7 +17,6 @@ import {
   useLoaderData,
 } from '@remix-run/react';
 
-import { Analytics } from '@vercel/analytics/react';
 import { Header } from '~/components/header';
 import { ThemeProvider } from '~/components/theme-provider';
 import { getThemeFromCookie } from '~/lib/theme.server';
@@ -39,44 +38,39 @@ export const loader: LoaderFunction = async ({
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Remix shadcn/ui Dark theme Demo App' },
+    { title: 'Remix shadcn/ui' },
     {
       property: 'og:title',
-      content: 'Remix shadcn/ui Dark theme Demo App',
+      content: 'Remix shadcn/ui',
     },
     {
       property: 'og:image',
-      content:
-        'https://remix-shadcn-ui-dark-theme-demo.vercel.app/assets/preview-dark.png',
+      content: '',
     },
     {
       name: 'description',
-      content:
-        'Remix shadcn/ui Dark theme Demo App to showcase the Dark theme toggle feature and reference for documentation',
+      content: '',
     },
     {
       name: 'og:description',
-      content:
-        'Remix shadcn/ui Dark theme Demo App to showcase the Dark theme toggle feature and reference for documentation',
+      content: '',
     },
     {
       name: 'og:url',
-      content: 'https://remix-shadcn-ui-dark-theme-demo.vercel.app/',
+      content: '',
     },
 
     {
       property: 'twitter:title',
-      content: 'Remix shadcn/ui Dark theme Demo App',
+      content: 'Remix shadcn/ui',
     },
     {
       property: 'twitter:image',
-      content:
-        'https://remix-shadcn-ui-dark-theme-demo.vercel.app/assets/preview-dark.png',
+      content: '',
     },
     {
       property: 'twitter:card',
-      content:
-        'https://remix-shadcn-ui-dark-theme-demo.vercel.app/assets/preview-dark.png',
+      content: '',
     },
   ];
 };
@@ -103,7 +97,6 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-        <Analytics />
         <ThemeProvider defaultTheme={theme} onThemeChange={onThemeChange}>
           <Header />
           <Outlet />
