@@ -103,6 +103,19 @@ export default function App() {
         </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
+        <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+        {/*<!-- lucide-react --> */}
+        {/*<!-- @radix-ui/react-accordion --> */}
+        {/*<!-- @radix-ui/react-avatar --> */}
+        {/*<!-- @radix-ui/react-dialog --> */}
+        {/*<!-- @radix-ui/react-dropdown-menu --> */}
+        {/*<!-- @radix-ui/react-icons --> */}
+        {/*<!-- @radix-ui/react-label --> */}
+        {/*<!-- @radix-ui/react-menubar --> */}
+        {/*<!-- @radix-ui/react-popover --> */}
+        {/*<!-- @radix-ui/react-select --> */}
+        {/*<!-- @radix-ui/react-slot --> */}
+        {/*<!-- @radix-ui/react-tabs --> */}
         <LiveReload />
       </body>
     </html>
