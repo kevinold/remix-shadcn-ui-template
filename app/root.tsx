@@ -114,7 +114,7 @@ export default function App() {
         {/*<!-- @radix-ui/react-menubar --> */}
         {/*<!-- @radix-ui/react-popover --> */}
         {/*<!-- @radix-ui/react-select --> */}
-        {/*<!-- @radix-ui/react-slot --> */}
+        <script src="https://cdn.jsdelivr.net/npm/@radix-ui/react-slot@1.0.2/dist/index.min.js"></script>
         {/*<!-- @radix-ui/react-tabs --> */}
         <LiveReload />
       </body>
