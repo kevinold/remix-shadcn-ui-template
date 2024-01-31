@@ -3,7 +3,7 @@ import { Link } from '@remix-run/react';
 import { Briefcase, LogOut } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 
-export const AppHeader = () => {
+export const Header = () => {
   return (
     <header className="flex flex-nowrap justify-between w-full p-2 sticky top-0 backdrop-blur-md bg-white/50 dark:bg-slate-800/50">
       <div className="mr-4 hidden md:flex px-4">
