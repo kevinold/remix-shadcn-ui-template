@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import TitleForm from '~/components/title-form';
 
 export default function Index() {
   return (
@@ -137,9 +138,11 @@ export default function Index() {
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 max-w-full">
                 <Card className="col-span-3">
                   <CardHeader>
-                    <CardTitle>New Title</CardTitle>
+                    <CardTitle></CardTitle>
                   </CardHeader>
-                  <CardContent className="md:pl-2 px-1"></CardContent>
+                  <CardContent className="md:pl-2 px-1">
+                    <TitleForm />
+                  </CardContent>
                 </Card>
                 <Card className="col-span-4">
                   <CardHeader>
