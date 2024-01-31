@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -7,19 +6,12 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CalendarDateRangePicker } from '@/components/date-range-picker';
-import { MainNav } from '@/components/main-nav';
-import { Overview } from '@/components/overview';
-import { RecentSales } from '@/components/recent-sales';
-import { Search } from '@/components/search';
-import TeamSwitcher from '@/components/team-switcher';
-import { UserNav } from '@/components/user-nav';
 
 export default function Index() {
   return (
     <div className="min-h-screen">
       <div className="flex-col flex">
-        <div className="border-b">
+        {/* <div className="border-b">
           <div className="flex md:h-16 md:items-center px-4 md:flex-row flex-col h-auto justify-between">
             <TeamSwitcher />
             <MainNav className="mx-6 my-3 md:my-0" />
@@ -28,30 +20,22 @@ export default function Index() {
               <UserNav />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex-1 space-y-4 md:p-8 pt-6 p-2">
           <div className="flex md:items-center md:justify-between space-y-2 flex-col md:flex-row justify-start">
             <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
             <div className="flex items-center space-x-2">
-              <CalendarDateRangePicker />
-              <Button>Download</Button>
+              {/* <CalendarDateRangePicker />
+              <Button>Download</Button> */}
             </div>
           </div>
-          <Tabs defaultValue="overview" className="space-y-4">
+          <Tabs defaultValue="titles" className="space-y-4">
             <TabsList>
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="analytics" disabled>
-                Analytics
-              </TabsTrigger>
-              <TabsTrigger value="reports" disabled>
-                Reports
-              </TabsTrigger>
-              <TabsTrigger value="notifications" disabled>
-                Notifications
-              </TabsTrigger>
+              <TabsTrigger value="titles">Titles</TabsTrigger>
+              <TabsTrigger value="pages">Pages</TabsTrigger>
             </TabsList>
-            <TabsContent value="overview" className="space-y-4">
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <TabsContent value="titles" className="space-y-4">
+              {/* <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
@@ -149,26 +133,20 @@ export default function Index() {
                     </p>
                   </CardContent>
                 </Card>
-              </div>
+              </div> */}
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 max-w-full">
-                <Card className="col-span-4">
-                  <CardHeader>
-                    <CardTitle>Overview</CardTitle>
-                  </CardHeader>
-                  <CardContent className="md:pl-2 px-1">
-                    <Overview />
-                  </CardContent>
-                </Card>
                 <Card className="col-span-3">
                   <CardHeader>
-                    <CardTitle>Recent Sales</CardTitle>
-                    <CardDescription>
-                      You made 265 sales this month.
-                    </CardDescription>
+                    <CardTitle>New Title</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <RecentSales />
-                  </CardContent>
+                  <CardContent className="md:pl-2 px-1"></CardContent>
+                </Card>
+                <Card className="col-span-4">
+                  <CardHeader>
+                    <CardTitle>Titles</CardTitle>
+                    <CardDescription>Titles you're watching</CardDescription>
+                  </CardHeader>
+                  <CardContent></CardContent>
                 </Card>
               </div>
             </TabsContent>
