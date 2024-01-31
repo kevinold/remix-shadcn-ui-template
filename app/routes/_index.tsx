@@ -6,7 +6,17 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import type { ActionFunctionArgs } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import TitleForm from '~/components/title-form';
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = await request.formData();
+
+  console.log('title', formData.get('title'));
+
+  return json({ ok: true });
+}
 
 export default function Index() {
   return (
